@@ -5,21 +5,15 @@
     <title>Screen Share</title>
   </head>
   <body>
+
+    <button type="button" name="button" class="getCode">Get Code</button>
+    <div class="code"></div>
+    <button type="button" name="button" class="startSharing">Start Sharing</button>
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://api.screenleap.com/js/screenleap.js"></script>
-    <script type="text/javascript">
-        window.onload = function() {
-
-  fetch("https://api.screenleap.com/v2/screen-shares", {
-    method: "POST",
-    headers: {authtoken:'FzBOXrIsHi', accountid:'primetenders'}
-  })
-  .then(function(res){ return res.json(); })
-  .then( function(data){
-
-    screenleap.startSharing('DEFAULT', data);
-  })
-
-        };
-    </script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
