@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Screen Share</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="https://api.screenleap.com/js/screenleap.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+
+  fetch("https://api.screenleap.com/v2/screen-shares", {
+    method: "POST",
+    headers: {authtoken:'FzBOXrIsHi', accountid:'primetenders'}
+  })
+  .then(function(res){ return res.json(); })
+  .then( function(data){
+
+    screenleap.startSharing('DEFAULT', data);
+  })
+
+        };
+    </script>
+  </body>
+</html>
