@@ -5,7 +5,7 @@ $(document).ready( function() {
   })
   .then(function(res){ return res.json(); })
   .then( function(data){
-    $('.code').html(JSON.stringify(data))
+    $('.code').html(JSON.stringify(data.viewerUrl))
 
     $( ".startSharing" ).click(function() {
       screenleap.startSharing('DEFAULT', data)
