@@ -23,7 +23,7 @@ function generate_Code(code) {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify({code:code})
+  body: JSON.stringify({code:code, id: id})
   })
   .then(function(res){ return res.json(); })
   .then( function(response){
